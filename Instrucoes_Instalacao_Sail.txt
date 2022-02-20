@@ -27,5 +27,38 @@
 
 9 - A extensão WSL no Vscode deve estar instalada
 
+10 - Clonando um projeto do Git e usando o Laravel Sail:
+
+	I   - git clone ....
+	II  - copiar e configurar o .env
+
+	DB_CONNECTION=mysql
+	DB_HOST=mysql
+	DB_PORT=3306
+	DB_DATABASE=sail_example
+	DB_USERNAME=sail
+	DB_PASSWORD=password
+
+	MEMCACHED_HOST=memcached
+
+	REDIS_HOST=redis
+	REDIS_PASSWORD=null
+	REDIS_PORT=6379
+
+	III - Instalar o composer (verificar documentação Laravel)
+
+	docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+
+	IV  - sail up -d
+	IV  - sail artisan key:generate
+
+	
+	
+
 	
 	
