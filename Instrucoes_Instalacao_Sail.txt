@@ -1,0 +1,31 @@
+1 - No bash do Ubuntu (WSL2) chamar o diretorio raiz (cd)
+
+2 - curl -s "https://laravel.build/laravel-sail-9?with=mysql,redis" | bash
+
+3 - Para localizar a pasta onde estão os projetos basta clicar na parte lateral no 
+    explorer no icone do Linux > Ubuntu-20,04 > Home > Bruno
+
+4 - Para levantar a imagem docker:
+
+	cd  laravel-sail-9
+	./vendor/bin/sail up -d
+
+5 - Para criar um apelido (alias) e diminuir o tamanho do comando: nano ~/.bashrc
+
+	No final do arquivo digitar: alias sail='bash vendor/bin/sail'
+	No bash: . ~/.bashrc
+
+6 - Para levantar / parar o container: sail up -d  /  sail down
+
+7 - Para passar os comandos artisan: sail artisan make:controller ....
+
+8 - Para acessar o BD:
+
+	Hostname: localhost
+	User: sail
+	Password: password
+
+9 - A extensão WSL no Vscode deve estar instalada
+
+	
+	
